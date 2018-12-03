@@ -55,3 +55,10 @@ class AbstractModel(models.Model):
             return self
         except IntegrityError:
             LOGGER.error(f'Fail to object {self} with following data: {data}')
+
+    @classmethod
+    def get_filtered(cls, **kwargs):
+        """Returns the filtered queryset of current Model class."""
+
+        filtered_objs = cls.objects.filter(**kwargs)
+        return filtered_objs if filtered_objs else None
