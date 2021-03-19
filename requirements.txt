@@ -1,7 +1,7 @@
 # Main dependencies
 
 Django==1.11.29
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 drf-nested-routers==0.91
 psycopg2==2.8.5
 PyJWT==1.7.1
